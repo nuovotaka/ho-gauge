@@ -14,3 +14,11 @@ camera の画像及び動画の処理の python プログラムはホームデ�
 ## index file
 
 templete ディレクトリを作成してその中へ index ファイルを置く。
+
+## Raspberry-pi-zero-w
+
+os: rasbian(desktop)
+
+## Camera
+
+ras pi camera v2
