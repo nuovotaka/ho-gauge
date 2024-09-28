@@ -1,0 +1,615 @@
+[
+    {
+        "id": "43f9b703350acb0f",
+        "type": "tab",
+        "label": "フロー 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8f52ad4526c95fdc",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "YYYY/MM/DD",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "b28f20c05d7d71ea",
+        "type": "ui_tab",
+        "name": "Camera",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a9d92778d9701acd",
+        "type": "ui_group",
+        "name": "Streaming",
+        "tab": "b28f20c05d7d71ea",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "61e3f7516c5a62c7",
+        "type": "ui_group",
+        "name": "sys",
+        "tab": "b28f20c05d7d71ea",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f71883e9b9344f8e",
+        "type": "ui_group",
+        "name": "Still",
+        "tab": "b28f20c05d7d71ea",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8526b3a3c790b958",
+        "type": "inject",
+        "z": "43f9b703350acb0f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Shut Down Now",
+        "payloadType": "str",
+        "x": 180,
+        "y": 40,
+        "wires": [
+            [
+                "c1db9475817a9f68"
+            ]
+        ]
+    },
+    {
+        "id": "925bfb6f89c5860f",
+        "type": "shutdown",
+        "z": "43f9b703350acb0f",
+        "name": "終了",
+        "x": 870,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "7f7b162d6d77f6c2",
+        "type": "delay",
+        "z": "43f9b703350acb0f",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 620,
+        "y": 40,
+        "wires": [
+            [
+                "925bfb6f89c5860f"
+            ]
+        ]
+    },
+    {
+        "id": "1ac97016eeb2663c",
+        "type": "inject",
+        "z": "43f9b703350acb0f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "iso",
+        "payloadType": "date",
+        "x": 180,
+        "y": 200,
+        "wires": [
+            [
+                "c4418d5a0dd614cf"
+            ]
+        ]
+    },
+    {
+        "id": "1b2acbdae3320386",
+        "type": "exec",
+        "z": "43f9b703350acb0f",
+        "command": "python /home/pi/streaming.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 610,
+        "y": 200,
+        "wires": [
+            [],
+            [
+                "f28e2f3c268d7473"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "f28e2f3c268d7473",
+        "type": "debug",
+        "z": "43f9b703350acb0f",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "a08deeb651d1334f",
+        "type": "debug",
+        "z": "43f9b703350acb0f",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "321d8699daf0459e",
+        "type": "inject",
+        "z": "43f9b703350acb0f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "再起動",
+        "payloadType": "str",
+        "x": 150,
+        "y": 120,
+        "wires": [
+            [
+                "5d2a3953ee89054e"
+            ]
+        ]
+    },
+    {
+        "id": "c506a1777441637c",
+        "type": "delay",
+        "z": "43f9b703350acb0f",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 620,
+        "y": 120,
+        "wires": [
+            [
+                "594ec096a9c69219"
+            ]
+        ]
+    },
+    {
+        "id": "594ec096a9c69219",
+        "type": "restart",
+        "z": "43f9b703350acb0f",
+        "name": "再起動",
+        "x": 870,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "2716853cc934cfd0",
+        "type": "http in",
+        "z": "43f9b703350acb0f",
+        "name": "前面展望",
+        "url": "/camera",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 620,
+        "wires": [
+            [
+                "0c21056f568dacf5"
+            ]
+        ]
+    },
+    {
+        "id": "2f8fd13af6931368",
+        "type": "http response",
+        "z": "43f9b703350acb0f",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 630,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "0c21056f568dacf5",
+        "type": "template",
+        "z": "43f9b703350acb0f",
+        "name": "Streaming",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<head>\n    <title>Streaming</title>\n</head>\n<body>\n    <div>\n        <iframe title=\"前面展望\" width=\"640\" height=\"480\" src=\"http://192.168.1.57:8000/\"</iframe>\n    </div>\n</body>\n</html>\n<script>\n</script>\n<style>\n    /* define any styles here - supports raw CSS */\n    .my-class {\n        color: red;\n    }\n</style>",
+        "output": "str",
+        "x": 410,
+        "y": 620,
+        "wires": [
+            [
+                "2f8fd13af6931368"
+            ]
+        ]
+    },
+    {
+        "id": "719e3af6d6a80b33",
+        "type": "camerapi-takephoto",
+        "z": "43f9b703350acb0f",
+        "filemode": "1",
+        "filename": "`msg.filename`",
+        "filedefpath": "0",
+        "filepath": "/home/pi/Pictures/",
+        "fileformat": "jpeg",
+        "resolution": "2",
+        "rotation": "0",
+        "fliph": "0",
+        "flipv": "0",
+        "brightness": "50",
+        "contrast": "0",
+        "sharpness": "0",
+        "quality": "80",
+        "imageeffect": "none",
+        "exposuremode": "auto",
+        "iso": "0",
+        "agcwait": "1.0",
+        "led": "0",
+        "awb": "auto",
+        "name": "HD",
+        "x": 630,
+        "y": 300,
+        "wires": [
+            [
+                "a08deeb651d1334f"
+            ]
+        ]
+    },
+    {
+        "id": "234f56558b133143",
+        "type": "function",
+        "z": "43f9b703350acb0f",
+        "name": "function 1",
+        "func": "const d = new Date()\nconst year = d.getFullYear()\nconst month = (d.getMonth() + 1).toString().padStart(2, '0')\nconst day = d.getDate().toString().padStart(2, '0')\nconst hours = d.getHours()\nconst minutes = d.getMinutes()\nconst seconds = d.getSeconds()\nmsg.date = d.getTime()\nmsg.filename = `image_${year}-${month}-${day}-${hours}_${minutes}_${seconds}.jpg`\nreturn msg",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 300,
+        "wires": [
+            [
+                "719e3af6d6a80b33"
+            ]
+        ]
+    },
+    {
+        "id": "259e31f26a56f57f",
+        "type": "inject",
+        "z": "43f9b703350acb0f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "iso",
+        "payloadType": "date",
+        "x": 120,
+        "y": 260,
+        "wires": [
+            [
+                "835223d0ae38771d"
+            ]
+        ]
+    },
+    {
+        "id": "c1db9475817a9f68",
+        "type": "ui_button",
+        "z": "43f9b703350acb0f",
+        "name": "",
+        "group": "61e3f7516c5a62c7",
+        "order": 0,
+        "width": "6",
+        "height": "4",
+        "passthru": false,
+        "label": "終了",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 390,
+        "y": 40,
+        "wires": [
+            [
+                "7f7b162d6d77f6c2"
+            ]
+        ]
+    },
+    {
+        "id": "5d2a3953ee89054e",
+        "type": "ui_button",
+        "z": "43f9b703350acb0f",
+        "name": "",
+        "group": "61e3f7516c5a62c7",
+        "order": 1,
+        "width": "6",
+        "height": "4",
+        "passthru": false,
+        "label": "再起動",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 370,
+        "y": 120,
+        "wires": [
+            [
+                "c506a1777441637c"
+            ]
+        ]
+    },
+    {
+        "id": "835223d0ae38771d",
+        "type": "ui_button",
+        "z": "43f9b703350acb0f",
+        "name": "",
+        "group": "f71883e9b9344f8e",
+        "order": 2,
+        "width": "12",
+        "height": "4",
+        "passthru": false,
+        "label": "写真",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "iso",
+        "payloadType": "date",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 250,
+        "y": 300,
+        "wires": [
+            [
+                "234f56558b133143"
+            ]
+        ]
+    },
+    {
+        "id": "c4418d5a0dd614cf",
+        "type": "ui_button",
+        "z": "43f9b703350acb0f",
+        "name": "",
+        "group": "a9d92778d9701acd",
+        "order": 2,
+        "width": "12",
+        "height": "4",
+        "passthru": false,
+        "label": "前面展望",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "iso",
+        "payloadType": "date",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 380,
+        "y": 200,
+        "wires": [
+            [
+                "1b2acbdae3320386",
+                "0a0a8997a2a8df6b"
+            ]
+        ]
+    },
+    {
+        "id": "0a0a8997a2a8df6b",
+        "type": "ui_template",
+        "z": "43f9b703350acb0f",
+        "group": "a9d92778d9701acd",
+        "name": "Streaming",
+        "order": 1,
+        "width": "12",
+        "height": "8",
+        "format": "<div>\n    <iframe width=\"640\" height=\"480\" src=\"http://192.168.1.57:1880/camera\"></iframe>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 590,
+        "y": 260,
+        "wires": [
+            [
+                "f28e2f3c268d7473"
+            ]
+        ]
+    }
+]
