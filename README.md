@@ -17,7 +17,7 @@ templete ディレクトリを作成してその中へ index ファイルを置�
 
 ## Raspberry-pi-zero-w
 
-os: rasbian(desktop)
+os: 32-bit raspbian bullseye (desktop)
 
 ## Camera
 
